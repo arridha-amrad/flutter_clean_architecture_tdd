@@ -22,12 +22,12 @@ void main() {
 
   test('should get trivia for a random number from the repository', () async {
     // arrange
-    when(mockNumberTriviaRepository.getRandomNumber())
+    when(mockNumberTriviaRepository.getRandomNumberTrivia())
         .thenAnswer((_) async => Right(tNumberTrivia2));
     // act
     final result = await useCase(NoParams());
     // assert
     expect(result, Right(tNumberTrivia2));
-    verify(mockNumberTriviaRepository.getRandomNumber());
+    verify(mockNumberTriviaRepository.getRandomNumberTrivia());
   });
 }

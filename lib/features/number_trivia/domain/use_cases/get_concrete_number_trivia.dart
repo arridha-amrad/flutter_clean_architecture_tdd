@@ -11,7 +11,7 @@ class GetConcreteNumberTrivia implements UsesCases<NumberTrivia, Params> {
 
   @override
   Future<Either<Failure, NumberTrivia>> call(Params params) async =>
-      await repository.getConcreteNumber(params.number);
+      await repository.getConcreteNumberTrivia(params.number);
 }
 
 class Params extends Equatable {
